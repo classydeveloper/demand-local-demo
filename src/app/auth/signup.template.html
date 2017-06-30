@@ -1,0 +1,75 @@
+<div class="container">
+  <main id="content" class="widget-login-container" role="main">
+    <div class="row">
+      <div class="col-xl-4 col-md-6 col-10 offset-xl-4 offset-md-3 offset-1">
+        <h5 class="widget-login-logo animated fadeInUp logo">
+          <!--<i class="fa fa-circle text-gray"></i>-->
+          <!--Demand Local-->
+          <!--<i class="fa fa-circle text-warning"></i>-->
+        </h5>
+        <section class="widget widget-login animated fadeInUp">
+          <header>
+            <h3>Campaign Analytics</h3>
+          </header>
+          <div class="widget-body">
+
+
+            <p class="widget-login-info">
+              Create a new Account
+            </p>
+            <form class="login-form mt-lg" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <!--<label for="email">Mail</label>-->
+                <input
+                  type="text"
+                  id="firstName"
+                  class="form-control"
+                  formControlName="firstName" placeholder="@John">
+                <!--<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username">-->
+              </div>
+              <div class="form-group">
+                <!--<label for="email">Mail</label>-->
+                <input
+                  type="text"
+                  id="lastName"
+                  class="form-control"
+                  formControlName="lastName" placeholder="@Smith">
+                <!--<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username">-->
+              </div>
+              <div class="form-group">
+                <!--<label for="email">Mail</label>-->
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  formControlName="email" placeholder="Email">
+                <!--<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username">-->
+              </div>
+              <div class="form-group">
+                <!--<label for="password">Password</label>-->
+                <input
+                  type="password"
+                  id="password"
+                  class="form-control"
+                  formControlName="password" placeholder="Password">
+                <!--<input class="form-control" id="pswd" type="text" placeholder="Password">-->
+              </div>
+              <div class="clearfix">
+                <div class="btn-toolbar m-t-1">
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                    [disabled]="!myForm.valid">Create New Account</button>
+                  <!--<a class="btn btn-inverse btn-sm" [routerLink]="['/app', 'dashboard'] ">Login</a>-->
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="page-footer">
+    2017 &copy; All Rights reserved by DemandLocal
+  </footer>
+</div>
